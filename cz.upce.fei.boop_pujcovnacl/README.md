@@ -1,57 +1,39 @@
-## Postup prací PujcovnaCL
+Описание и запуск проекта:
 
-1. Otevřte projekt v NetBeans a přejmenujte projekt tak, že místo koncovky 
-    ***Prijmeni** vložíte svoje příjmení. 
-    - Jenom přejmenovaný projekt bude hodnocen.
+Созданы обязательные пакеты:
 
-2. Vytvořte tyto povinné balíčky:
-    * ***kolekce*** pro všechny třídy, a rozhraní, které souvisí s interfejsem Seznam
-    * ***data*** pro třídy, které popisuj datové typy
-    * ***generator*** pro třídy generátoru testovacího vzorku dat.
-    * ***perzistence*** pro třídy, které zajistí lehkou perzistenci dat seznamu
-    * ***command*** pro třídy uživatelského rozhraní příkazového řádku
+kolekce - содержит классы и интерфейсы, связанные с интерфейсом Seznam.
+data - включает собственные классы данных, такие как Serials, Anime, Films, каждый из которых имеет общего предка, что было утверждено преподавателем.
+generator - содержит классы, которые генерируют случайные объекты на основе классов из пакета data и вставляют их в связанный список для тестирования.
+perzistence - включает классы, отвечающие за сохранение и восстановление данных списка в двоичные и текстовые файлы.
+command - содержит классы, которые интерпретируют пользовательские команды и выполняют соответствующие действия, такие как создание новых элементов, поиск, удаление, редактирование данных, а также управление списком и его сохранение.
 
-4. Do do balíčku ***kolekce*** překopírujte z předchozího projektu SpojovySeznam 
-   třídy a rozhraní včetně jejich testů.
+В пакет kolekce были перенесены классы и интерфейсы SpojovySeznam из предыдущего проекта вместе с соответствующими тестами.
 
-5. V balíčku ***data*** vytvořte vlastní datové třídy, které například vyberete 
-   podle vašeho projektu z BSWIN. Příklady skupin tříd: Rezervace, Vypujcka nebo
-   Recepcni, Technik, AutoOpravar. Již nebudou povoleny tyto třídy: 
-   OsobniAutomobil, NakladniAutomobil a Traktor. 
-   Při výběru tříd volte takové třídy, aby měly společného předka. 
-   Každý student si zvolí svoji specifickou kombinaci tříd a jejich atributů,
-   které musí schválit vyučující. Z toho plyne, že nemůže dojít k tomu, 
-   aby dva studenti měli stejné semestrální práce.
+В пакете generator были созданы классы, которые успешно генерируют случайные данные на основе классов из пакета data и вставляют их в список.
 
-6. Do balíčku ***generator*** vložte třídy, které budou generovat náhodně objekty 
-   podle tříd z balíčku data. Vygenerované objekty  vložte do spojového seznamu.
+В пакет perzistence были реализованы классы, отвечающие за сохранение и восстановление данных списка в различных форматах файлов (двоичные и текстовые).
 
-7. Do balíčku ***perzistence*** vložte třídy, které budou
-    * zapisovat data seznamu do binárního souboru
-    * obnovovat data z binárního souboru do seznamu
-    * dále obsahovat stejné funkce, ale pro textové soubory
+Пакет command был разработан для интерпретации пользовательских команд и выполнения соответствующих операций с данными списка.
+help, h      - вывод списка команд
+novy, no     - создание нового экземпляра и вставка данных после текущего элемента
+najdi, na, n - поиск данных в списке по значению какого-либо атрибута
+odeber, od   - удаление данных из списка по значению атрибута
+dej          - показать текущие данные в списке
+edituj, edit - редактирование текущих данных в списке
+vyjmi        - извлечение текущих данных из списка
+prvni, pr    - установить первые данные в качестве текущих в списке
+dalsi, da    - перейти к следующим данным
+posledni, po - перейти к последним данным
+pocet        - показать количество элементов в списке
+obnov        - восстановить данные списка из двоичного файла
+zalohuj      - сделать резервную копию данных списка в двоичном файле
+vypis        - показать список данных
+nactitext, nt- загрузить данные списка из текстового файла
+uloztext, ut - сохранить данные списка в текстовый файл
+generuj, g   - генерация случайных данных для тестирования
+zrus         - удалить все данные из списка
+exit         - завершение программы
 
-8. Balíček ***command*** bude obsahovat třídy, které budou dekódovat uživatelské
-   příkazy a vykonávat je. Příklady příkazů
-   ```
-    help, h     - výpis příkazů
-    novy,no     - vytvoř novou instanci a vlož data za aktuální prvek
-    najdi,na,n  - najdi v seznamu data podle hodnoty nějakém atributu
-    odeber,od   - odeber data ze seznamu podle nějaké hodnoty atributu 
-    dej         - zobraz aktuální data v seznamu
-    edituj,edit - edituj aktuální data v seznamu
-    vyjmi       - vyjmi aktuální data ze seznamu
-    prvni,pr    - nastav jako aktuální první data v seznamu
-    dalsi,da    - přejdi na další data
-    posledni,po - přejdi na poslední data
-    pocet       - zobraz počet položek v seznamu
-    obnov       - obnov seznam data z binárního souboru
-    zalohuj     - zálohuj seznam dat do binárního souboru
-    vypis       - zobraz seznam dat
-    nactitext,nt- načti seznam data z textového souboru
-    uloztext,ut - ulož seznam data do textového souboru
-    generuj,g   - generuj náhodně data pro testování
-    zrus        - zruš všechny data v seznamu
-    exit        - ukončení programu
-    ```
- 9. Uložte projekt do repository (commit a push) ve větvi "main".
+Запуск проекта в консоли: Main.Main.java
+Запуск GUI: GUI.aplikace
