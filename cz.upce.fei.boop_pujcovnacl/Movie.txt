@@ -1,0 +1,12 @@
+FILM, id=0, nazev=Great Fantasy, hodnoceni=1, PG=EDULT, divaky=201
+FILM, id=1, nazev=Wonder Drama, hodnoceni=2, PG=EDULT, divaky=2528
+FILM, id=2, nazev=Fantastic Sci-Fi, hodnoceni=8, PG=EDULT, divaky=6238
+FILM, id=3, nazev=Epic Sci-Fi, hodnoceni=9, PG=EDULT, divaky=8205
+ANIME, id=4, nazev=Legend Romance, hodnoceni=5, PG=CHILD, divaky=9558
+ANIME, id=5, nazev=Journey Action, hodnoceni=4, PG=CHILD, divaky=9871
+ANIME, id=6, nazev=Adventure Fantasy, hodnoceni=2, PG=CHILD, divaky=7903
+ANIME, id=7, nazev=Fantastic Action, hodnoceni=7, PG=CHILD, divaky=5293
+SERIAL, id=8, nazev=Great Drama, hodnoceni=1, PG=TEEN, divaky=8311
+SERIAL, id=9, nazev=Fantastic Thriller, hodnoceni=10, PG=TEEN, divaky=2830
+SERIAL, id=10, nazev=Legend Sci-Fi, hodnoceni=0, PG=TEEN, divaky=9997
+SERIAL, id=11, nazev=Brave Fantasy, hodnoceni=7, PG=TEEN, divaky=5723
